@@ -11,3 +11,56 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Yeseva+One&display=swap');
+
+@mixin center-object {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color:white;
+}
+
+.movie-title {
+  color: #ebd150;
+  font-family: 'Yeseva One', cursive;
+  font-size: 48px;
+}
+
+.movie-credit {
+  font-family: 'Bebas Neue', cursive;
+  color: #ebd150;
+  font-size: 28px;
+
+}
+
+.subtitle {
+  color: #ebd150;
+  font-family: Helvetica;
+  font-style: italic;
+  letter-spacing: 0.7px;
+  font-size: 20px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  position: absolute;
+  bottom: 28px;
+}
+
+.screen-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  @include center-object;
+}
+
+.screen {
+  background-image: url(https://bloximages.newyork1.vip.townnews.com/postandcourier.com/content/tncms/assets/v3/editorial/4/2d/42dc4af0-4e98-11ea-8082-0756bdf62c12/5e45a57530a40.image.jpg?resize=1000%2C562);
+  height: 500px;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  @include center-object;
+
+}

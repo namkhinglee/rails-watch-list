@@ -1,0 +1,20 @@
+<div class="screen-container">
+  <div class="screen">
+    <h2 class="movie-credit">A FILM BY NAMKHING</h1>
+    <h1 class="movie-title">Watch list</h1>
+    <h3 class="subtitle"> - Find the perfect movie for your movie night</h3>
+  </div>
+
+
+</div>
+
+
+  <ul>
+    <% @lists.each do |list| %>
+      <li><%= link_to list.name, list_path(list) %></li>
+    <% end %>
+
+
+    <%= link_to "New list", new_list_path, class: "btn btn-dark" %>
+  </ul>
+
