@@ -1,20 +1,23 @@
 <div class="screen-container">
   <div class="screen">
-    <h2 class="movie-credit">A FILM BY NAMKHING</h1>
-    <h1 class="movie-title">Watch list</h1>
-    <h3 class="subtitle"> - Find the perfect movie for your movie night</h3>
+    <div class="container col-4">
+      <h2 class="movie-credit text-center">A FILM BY NAMKHING</h1>
+      <h1 class="movie-title text-center">Watch list</h1>
+    </div>
+     <%# <div class="category">
+        <h3>TEST</h3>
+      </div%>
+    <%= link_to "- Create your new list here", new_list_path, class: "subtitle" %>
   </div>
-
 
 </div>
 
 
   <ul>
     <% @lists.each do |list| %>
-      <li><%= link_to list.name, list_path(list) %></li>
+      <li><%= link_to list.name, list_path(list), class: "category" %></li>
     <% end %>
 
 
-    <%= link_to "New list", new_list_path, class: "btn btn-dark" %>
-  </ul>
 
+  </ul>

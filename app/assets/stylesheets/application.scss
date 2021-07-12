@@ -19,25 +19,27 @@
   align-items: center;
 }
 
+$yellow: #ebd150;
+
 h1 {
   color:white;
 }
 
 .movie-title {
-  color: #ebd150;
+  color: $yellow;
   font-family: 'Yeseva One', cursive;
-  font-size: 48px;
+  font-size: 64px;
 }
 
 .movie-credit {
   font-family: 'Bebas Neue', cursive;
-  color: #ebd150;
+  color: $yellow;
   font-size: 28px;
 
 }
 
 .subtitle {
-  color: #ebd150;
+  color: $yellow;
   font-family: Helvetica;
   font-style: italic;
   letter-spacing: 0.7px;
@@ -45,6 +47,11 @@ h1 {
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   position: absolute;
   bottom: 28px;
+   &:hover {
+    bottom:29px;
+    color: #cfb947;
+    text-decoration: none;
+  }
 }
 
 .screen-container {
@@ -62,5 +69,9 @@ h1 {
   background-size: cover;
   background-position: center;
   @include center-object;
+}
 
+.catagory {
+  width: 140px;
+  background-image: url(../images/award-frame.png);
 }
