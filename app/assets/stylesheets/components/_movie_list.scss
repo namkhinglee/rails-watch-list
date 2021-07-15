@@ -7,7 +7,7 @@
 $yellow: #ebd150;
 
 .movie-list {
-   width: 60vw;
+   width: 100vw;
    justify-content: center;
    align-items: center;
    display: flex;
@@ -37,7 +37,7 @@ $yellow: #ebd150;
 
 .hidden-poster {
   position: absolute;
-  left: 15%;
+  left: 25%;
   z-index: -4;
   visibility: hidden;
 }
