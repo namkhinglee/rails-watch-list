@@ -1,7 +1,10 @@
-<h1 style="color:black;">New list</h1>
-
-<%= simple_form_for @list do |f| %>
-  <%= f.input :name %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit "Create list", class: "btn btn-dark" %>
-<% end %>
+<div class="container">
+  <h1 class="mb-5 mt-5" style="text-align:center;">New list</h1>
+  <div class="d-flex justify-content-center">
+    <%= simple_form_for @list do |f| %>
+      <%= f.input :name %>
+      <%= f.input :photo, as: :file %>
+      <%= f.submit "Create list", class: "btn btn-light" %>
+    <% end %>
+  </div>
+</div>

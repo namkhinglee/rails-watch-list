@@ -30,6 +30,7 @@ body {
 h1 {
   color:white;
 }
+
 .spacing {
   width: 20px;
 }
@@ -92,5 +93,20 @@ h1 {
   margin: 40px 0;
   img {
     margin-bottom: 48px;
+  }
+}
+
+.actions {
+  position: absolute;
+  display: inline;
+  left: 40px;
+  top: 24px;
+  color: white;
+  a {
+    color: white;
+    &:hover {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+    }
   }
 }

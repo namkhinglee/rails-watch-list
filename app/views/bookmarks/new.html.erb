@@ -1,7 +1,10 @@
-<h1>Add movie to list</h1>
-
-<%= simple_form_for [@list, @bookmark] do |f| %>
-  <%= f.association :movie %>
-  <%= f.input :comment %>
-  <%= f.submit "Add movie", class: "btn btn-dark" %>
-<% end %>
+<div class="container">
+  <h1 class="mb-5 mt-5" style="text-align:center;">Add movie to list</h1>
+  <div class="d-flex justify-content-center">
+    <%= simple_form_for [@list, @bookmark] do |f| %>
+      <%= f.association :movie %>
+      <%= f.input :comment %>
+      <%= f.submit "Add movie", class: "btn btn-light" %>
+    <% end %>
+  </div>
+</div>

@@ -1,13 +1,16 @@
 <%# Banner %>
 <div class="screen-container">
-  <div class="screen"
-    style="background-image: url('
-    <% if @list.photo.attached? %>
-      <%= cl_image_path @list.photo.key, crop: :fill %>
-    <% else %>
-      <%= image_tag 'https://source.unsplash.com/UBhpOIHnazM' %>
-    <% end %>
-  ')">
+  <%# Buttons %>
+  <div class="actions">
+    <%= link_to "Back | ", lists_path %>
+    <%= link_to "Delete",
+                list_path(@list),
+                method: :delete,
+                data: { confirm: "Are you sure to delete #{@list.name}?" } %>
+  </div>
+  <%# Banner Image %>
+  <%# cl_image_path @list.photo.key  %>
+  <div class="screen" style="background-image: url('<%= @list.photo.attached? ? cl_image_path(@list.photo.key) : 'https://source.unsplash.com/UBhpOIHnazM' %>')">
     <div class="container col-4">
       <h2 class="movie-credit text-center">A LIST BY NAMKHING</h1>
       <h1 class="movie-title text-center"><%= @list.name %></h1>
@@ -16,6 +19,7 @@
   </div>
 </div>
 
+<%# Movie lists %>
 <div class="list-container d-flex flex-wrap justify-content-center">
   <% @list.bookmarks.each do |bookmark| %>
 
@@ -48,9 +52,3 @@
     </div>
   <% end %>
 </div>
-<%= link_to "Back", lists_path %>
-<%= link_to "Delete",
-              list_path(@list),
-              method: :delete,
-              data: { confirm: "Are you sure to delete #{@list.name}?" },
-              class: "btn btn-outline-dark" %>

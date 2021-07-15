@@ -1,7 +1,8 @@
 require 'open-uri'
+Bookmark.destroy.all
 Movie.destroy_all
 # List.destroy_all
-puts "🧹 Cleaning movies..."
+puts "🧹 Cleaning movies and bookmarks..."
 # the Le Wagon copy of the API
 url = 'http://tmdb.lewagon.com/movie/top_rated'
 response = JSON.parse(URI.open(url).read)
