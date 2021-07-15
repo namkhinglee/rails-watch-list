@@ -24,10 +24,10 @@
   <% @list.bookmarks.each do |bookmark| %>
 
     <div class="movie-list">
-      <div class="movie-list-detail">
-        <div class="hidden-poster">
+     <div class="hidden-poster">
           <%= image_tag bookmark.movie.poster_url, width: 320 %>
-        </div>
+    </div>
+      <div class="movie-list-detail">
        <h3><%= bookmark.movie.title.upcase %></h3>
 
         <div class="movie-list-info d-flex flex-inline">

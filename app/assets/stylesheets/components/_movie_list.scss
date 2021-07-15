@@ -7,10 +7,11 @@
 $yellow: #ebd150;
 
 .movie-list {
-   width: 100vw;
+   width: 60vw;
    justify-content: center;
    align-items: center;
    display: flex;
+   position: relative;
   // @include center-object;
 }
 
@@ -30,16 +31,15 @@ $yellow: #ebd150;
 }
 
 
-.movie-list-detail:hover .hidden-poster{
-  display: block;
-  position: relative;
-  top: 0;
-  left: 0;
+.movie-list:hover .hidden-poster{
+  visibility: visible;
  }
 
 .hidden-poster {
+  position: absolute;
+  left: 15%;
   z-index: -4;
-  display: none;
+  visibility: hidden;
 }
 
 .remove {
