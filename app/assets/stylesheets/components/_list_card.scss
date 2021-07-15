@@ -1,0 +1,36 @@
+.list-card {
+  height: 400px;
+  margin: 0px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.list-card > img {
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  padding: 0 8px;
+  top: 0;
+  height: 300px;
+  width: 100%;
+}
+
+.list-card > a {
+  text-align: center;
+  width: 100%;
+}
+
+.list-card .subtitle{
+  top: 248px;
+}
+
+.list-card .list-info {
+  font-family: 'Helvetica Neue',;
+  width: 70%;
+  text-align: center;
+  position: absolute;
+  top:312px;
+  color: white;
+  justify-content: center;
+}

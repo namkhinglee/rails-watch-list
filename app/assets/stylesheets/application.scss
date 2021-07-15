@@ -13,6 +13,7 @@
 @import "pages/index";
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Yeseva+One&display=swap');
 
+// Varaibles
 @mixin center-object {
   display: flex;
   justify-content: center;
@@ -21,8 +22,16 @@
 
 $yellow: #ebd150;
 
+
+body {
+  background-color: black;
+}
+
 h1 {
   color:white;
+}
+.spacing {
+  width: 20px;
 }
 
 .movie-title {
@@ -35,7 +44,6 @@ h1 {
   font-family: 'Bebas Neue', cursive;
   color: $yellow;
   font-size: 28px;
-
 }
 
 .subtitle {
@@ -57,12 +65,10 @@ h1 {
 .screen-container {
   width: 100vw;
   height: 100vh;
-  background-color: black;
   @include center-object;
 }
 
 .screen {
-  background-image: url(https://bloximages.newyork1.vip.townnews.com/postandcourier.com/content/tncms/assets/v3/editorial/4/2d/42dc4af0-4e98-11ea-8082-0756bdf62c12/5e45a57530a40.image.jpg?resize=1000%2C562);
   height: 500px;
   width: 100vw;
   background-repeat: no-repeat;
@@ -71,7 +77,20 @@ h1 {
   @include center-object;
 }
 
-.catagory {
-  width: 140px;
-  background-image: url(../images/award-frame.png);
+.list-container {
+  width: 100%;
+  margin: 0;
+  padding: 40px 0;
+}
+
+.footer {
+  color: white;
+  font-size: 14px;
+  font-family: Helvetica,Arial,sans-serif;
+  text-align: center;
+  justify-items: center;
+  margin: 40px 0;
+  img {
+    margin-bottom: 48px;
+  }
 }

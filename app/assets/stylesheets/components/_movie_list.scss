@@ -1,0 +1,61 @@
+@mixin center-object {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+$yellow: #ebd150;
+
+.movie-list {
+   width: 100vw;
+   justify-content: center;
+   align-items: center;
+   display: flex;
+  // @include center-object;
+}
+
+.movie-list-detail {
+  width: 480px;
+  height: 600px;
+  margin-bottom: 80px;
+  h3{
+    color: white;
+    font-size: 18px;
+    font-family: "Helvetica Neue";
+    font-weight: 400;
+    text-align: center;
+    margin: 48px 0;
+  }
+}
+
+.movie-list-detail .hidden-poster {
+     display: none;
+  }
+
+.movie-list-detail:hover .hidden-poster{
+    display: block;
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+
+.remove {
+  color: $yellow;
+  font-style: italic;
+  margin-top: 64px;
+}
+
+.movie-list-info {
+  color: white;
+  width: 480px;
+  .left {
+    width: 116px;
+    text-align: right;
+    margin-right: 16px;
+  }
+  .right {
+    width: 348px;
+    text-align: left;
+  }
+}
+
